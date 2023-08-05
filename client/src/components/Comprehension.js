@@ -105,23 +105,17 @@ function Comprehension() {
                   </div>
                 </div>
               </div>
-              <button
-                className="absolute top-0 right-0 mr-10 mt-10"
-                onClick={() => {
-                  deleteQuestion(index);
-                }}
-              >
-                delete
-              </button>
             </div>
           );
         })}
       <div className="rounded-lg w-3/4 mt-24   p-24  border">
         <div className="main-question mb-20">
           <h3 className="text-4xl mb-12">Question {questions.length + 1}</h3>
-
+          <div></div>
           <div className="mb-12">
-            <p className="text-2xl mb-4 font-medium">Question *</p>
+            <p className="text-2xl mb-4 font-medium">
+              Question {questions.length + 1}
+            </p>
             <input
               className="rounded-lg border border-solid text-2xl p-3 mr-4 w-3/4 "
               type="text"

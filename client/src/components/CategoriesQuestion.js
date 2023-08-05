@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
 import { nanoid } from "nanoid";
-import "../styles/catagoriesquestion.css";
 import "../index.css";
 import RenderComponent from "./RenderComponent";
 import axios from "axios";
@@ -84,11 +83,14 @@ function CategoriesQuestion() {
         answers,
       },
     ]);
-    axios.post("https://generator-zcgg.onrender.com/api/v1/question", {
-      question: ques,
-      categories,
-      answers,
-    });
+    axios
+      .post("https://generator-zcgg.onrender.com/api/v1/question", {
+        question: ques,
+        categories,
+        answers,
+      })
+      .then((res) => console.log(res))
+      .catch((error) => console.log(error));
     setAnswers([]);
     setCategories([]);
     setInputAnswer("");

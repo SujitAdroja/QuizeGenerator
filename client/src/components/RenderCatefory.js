@@ -1,7 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 
-function RenderCatefory({ question }) {
+function RenderCatefory({ question, no }) {
   const [state, setState] = useState({
     ...question,
     categories: question.categories.map((ans) => ans.name),
@@ -86,7 +86,7 @@ function RenderCatefory({ question }) {
   return (
     <div className="render-container w-3/4 mt-20 border p-24 pt-3 rounded-lg">
       <div className="py-9">
-        <h3 className="text-4xl mb-7">Question</h3>
+        <h3 className="text-4xl mb-7">Question {no + 1}</h3>
         <p className="mb-10 text-3xl">{state.question}</p>
         <div
           className="answers flex items-center gap-6 w-full h-20 justify-center mb-10 px-2"
