@@ -36,14 +36,7 @@ function RenderCatefory({ question, no }) {
   function onDrop(ev, ansCat) {
     let nameAnswer = ev.dataTransfer.getData("name");
     let catagoryAnswer = ev.dataTransfer.getData("cat");
-    console.log(
-      "itemname itemcat catagory",
-      nameAnswer,
-      catagoryAnswer,
-      ansCat
-    );
-    let answers;
-    let girl, boy;
+
     if (ansCat === "Answers") {
       let answers = {
         answers: [
@@ -78,7 +71,6 @@ function RenderCatefory({ question, no }) {
           );
         }
       });
-
       setTasks(newAnswers);
     }
   }
