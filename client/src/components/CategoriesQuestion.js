@@ -84,7 +84,7 @@ function CategoriesQuestion() {
         answers,
       },
     ]);
-    axios.post("http://localhost:8000/api/v1/question", {
+    axios.post("https://generator-zcgg.onrender.com/api/v1/question", {
       question: ques,
       categories,
       answers,

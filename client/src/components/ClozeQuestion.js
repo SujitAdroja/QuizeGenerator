@@ -67,7 +67,7 @@ function ClozeQuestion() {
         answers,
       },
     ]);
-    axios.post("http://localhost:8000/api/v1/questionCloze", {
+    axios.post("https://generator-zcgg.onrender.com/api/v1/questionCloze", {
       question: preview,
       answers,
     });

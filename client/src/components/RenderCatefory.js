@@ -6,15 +6,6 @@ function RenderCatefory({ question }) {
     ...question,
     categories: question.categories.map((ans) => ans.name),
   });
-  // {
-  //   question: "sujit is a boy",
-  //   answers: [
-  //     { cat: "boy", name: "sujit" },
-  //     { cat: "boy", name: "sharmil" },
-  //     { cat: "girl", name: "mansi" },
-  //   ],
-  //   categories: ["boy", "girl"],
-  // }
 
   const [tasks, setTasks] = useState({
     answers: state.answers.map((ans) => {
@@ -89,19 +80,6 @@ function RenderCatefory({ question }) {
       });
 
       setTasks(newAnswers);
-
-      // let answers = tasks["answers"].filter((item) => item.name !== nameAnswer);
-      // if (ansCat === "boy") {
-      //   if (tasks["boy"].find((index) => index.name == nameAnswer)) return;
-      //   girl = tasks["girl"].filter((item) => item.name !== nameAnswer);
-      //   boy = [...tasks["boy"], { name: nameAnswer, cat: catagoryAnswer }];
-      // } else {
-      //   if (tasks["girl"].find((index) => index.name == nameAnswer)) return;
-      //   boy = tasks["boy"].filter((item) => item.name !== nameAnswer);
-      //   girl = [...tasks["girl"], { name: nameAnswer, cat: catagoryAnswer }];
-      // }
-      // console.log("boy girl answers", boy, girl, answers);
-      // setTasks({ ...tasks, answers, boy, girl });
     }
   }
 

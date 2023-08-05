@@ -38,10 +38,13 @@ function Comprehension() {
         answers,
       },
     ]);
-    axios.post("http://localhost:8000/api/v1/questionComprehension", {
-      question: ques,
-      answers,
-    });
+    axios.post(
+      "https://generator-zcgg.onrender.com/api/v1/questionComprehension",
+      {
+        question: ques,
+        answers,
+      }
+    );
     setAnswers([]);
     setInputAnswer("");
     setQues("");

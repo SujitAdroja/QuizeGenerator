@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const quesn = require("./route/route");
 const connectDB = require("./db/connect");
+require("dotenv").config();
 const Questions = require("./model/questions");
 const cors = require("cors");
 
@@ -20,9 +21,7 @@ app.post("/api/v1/", async (req, res) => {
 
 const start = async () => {
   try {
-    await connectDB(
-      "mongodb+srv://SujitAdroja:SujitAdroja07@nodeexpressclust.wy8p0oz.mongodb.net/questions"
-    );
+    await connectDB(process.env.MONGO_URI);
     app.listen(port, console.log(`listening to the ${port}....`));
   } catch (error) {
     console.log(error);
